@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom';
+import { RESTAURANT_INFO } from '../lib/constants'; // ✅ Importamos la info centralizada
+
 
 export default function Home() {
-  // Configuración del número de WhatsApp del restaurante
-  const whatsappNumber = "573100000000"; 
-  const whatsappWelcomeMessage = encodeURIComponent("¡Hola! 👋 Vengo de la web y quiero probar las delicias de San Bernardino. ¿Me ayudan con mi pedido? 🍔");
+  // Preparamos el mensaje de bienvenida para el botón de contacto
+  const whatsappWelcomeMessage = encodeURIComponent(
+    `¡Hola! 👋 Vengo de la web de ${RESTAURANT_INFO.name} y quiero más información. 🍔`
+  );
 
   return (
     <div className="flex flex-col min-h-screen overflow-x-hidden">
@@ -66,14 +69,13 @@ export default function Home() {
               PEDIR AHORA 🍔
             </Link>
 
-            {/* CTA Secundario: Contacto Humano */}
+            {/* Botón de WhatsApp usando la constante */}
             <a 
-              href={`https://wa.me/${whatsappNumber}?text=${whatsappWelcomeMessage}`}
+              href={`https://wa.me/${RESTAURANT_INFO.whatsapp}?text=${whatsappWelcomeMessage}`}
               target="_blank"
               rel="noreferrer"
               className="w-full sm:w-auto px-10 py-5 border-2 border-white text-white font-black rounded-full 
-                         hover:bg-white/10 hover:scale-105 
-                         transition-all duration-300 backdrop-blur-md tracking-widest text-xs uppercase text-center"
+                         hover:bg-white/10 hover:scale-105 transition-all duration-300 backdrop-blur-md tracking-widest text-xs uppercase text-center"
             >
               HABLAR CON EL CHEF
             </a>
