@@ -1,0 +1,20 @@
+/* Scroll suave global */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selección de texto con branding */
+::selection {
+  background: rgba(164, 29, 29, 0.2); /* sb-red */
+  color: #111;
+}
+
+/* Scrollbar custom (opcional pero fino) */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(164, 29, 29, 0.5);
+  border-radius: 10px;
+}
