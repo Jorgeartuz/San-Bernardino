@@ -29,12 +29,17 @@ export default {
         'slide-down': {
           '0%': { transform: 'translateY(-10px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
-        }
+        },
+        zoom: {
+  '0%': { transform: 'scale(1)' },
+  '100%': { transform: 'scale(1.15)' },
+},
       },
       animation: {
         'fade-in-up': 'fade-in-up 0.5s ease-out forwards',
         'fade-in': 'fade-in 1s ease-out forwards',
         'slide-down': 'slide-down 0.3s ease-out forwards',
+        'ken-burns': 'zoom 20s ease-in-out infinite alternate',
       }
     },
   },
