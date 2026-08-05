@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 export default function Home() {
   // Configura aquí el número de WhatsApp para contacto directo
-  const whatsappNumber = "573100000000"; 
+  const whatsappNumber = "573104028647"; 
 
   return (
     <div className="flex flex-col min-h-screen overflow-x-hidden">
